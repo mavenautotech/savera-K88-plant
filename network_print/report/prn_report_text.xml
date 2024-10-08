@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <report id="action_prn_1_report_text"
+                string="PRN(Article-50217139)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_for_article_1"
+                name="network_print.report_for_article_1"
+                menu="False"/> -->
+
+
+        <report id="action_prn_a_report_text"
+                string="PRN(Article-Malius)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_a_report"
+                name="network_print.report_product_a_report"
+                menu="False"/>
+
+
+        <report id="action_prn_b_report_text"
+                string="PRN(Article-Stig)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_b_report"
+                name="network_print.report_product_b_report"
+                menu="False"/>
+
+        <report id="action_prn_c_report_text"
+                string="PRN(Article-Gonde)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_c_report"
+                name="network_print.report_product_c_report"
+                menu="False"/>
+
+        <report id="action_prn_d_report_text"
+                string="PRN(Article-Kompliment)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_d_report"
+                name="network_print.report_product_d_report"
+                menu="False"/>
+
+        <report id="action_prn_e_report_text"
+                string="PRN(Article-teodone)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_e_report"
+                name="network_print.report_product_e_report"
+                menu="False"/>
+
+        <report id="action_prn_f_report_text"
+                string="PRN(Article-nlsse)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_f_report"
+                name="network_print.report_product_f_report"
+                menu="False"/>
+
+        <report id="action_prn_g_report_text"
+                string="PRN(Article-cartained1m2m)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_g_report"
+                name="network_print.report_product_g_report"
+                menu="False"/>
+
+        <report id="action_prn_h_report_text"
+                string="PRN(Article-cartained1/2m)"
+                model="network.print"
+                report_type="qweb-text"
+                file="network_print.report_product_h_report"
+                name="network_print.report_product_h_report"
+                menu="False"/>                
+    </data>
+</odoo>
