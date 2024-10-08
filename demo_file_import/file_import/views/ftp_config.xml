@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_ftp_config_tree" model="ir.ui.view">
+            <field name="name">ftp.config.tree</field>
+            <field name="model">ftp.config</field>
+            <field name="arch" type="xml">
+                <tree string="FTP Configuration" editable="top" create="true">
+                    <field name="ftp_user_id"/>
+                    <field name="ftp_password"/>
+                    <field name="ftp_path_testing"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ftp_config_action" model="ir.actions.act_window">
+            <field name="name">FTP Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ftp.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id = "ftp_config_menu" action = "ftp_config_action" parent="stock.menu_stock_config_settings"/>
+    </data>
+</odoo>

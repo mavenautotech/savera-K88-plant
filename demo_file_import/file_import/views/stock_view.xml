@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_file_import_tree" model="ir.ui.view">
+        <field name="name">file.import.tree</field>
+        <field name="model">file.import</field>
+        <field name="arch" type="xml">
+            <header>
+                <button string="Upload File" name="action_done" type="object"/>
+            </header>
+            <tree>
+                <field name="label_id"/>
+                <field name="print_job_id"/>
+                <field name="ip_address"/>
+                <field name="verification_type"/>
+                <field name="passing_grade_threshold"/>
+                <field name="date"/>
+                <field name="time"/>
+                <field name="last_calibration_grade"/>
+                <field name="label_numeric_grade"/>
+                <field name="label_grade"/>
+                <field name="label_status"/>
+                <field name="label_failure_reason"/>
+                <field name="barcode_id"/>
+                <field name="symbology"/>
+                <field name="version"/>
+                <field name="size"/>
+                <field name="numeric_grade"/>
+                <field name="grade"/>
+                <field name="overall_grade"/>
+                <field name="status"/>
+                <field name="scan_line_data_check"/>
+                <field name="xpixel"/>
+                <field name="ypixel"/>
+                <field name="failure_reason"/>
+                <field name="rmax"/>
+                <field name="rmin"/>
+                <field name="rmin_grade"/>
+                <field name="ec_min"/>
+                <field name="ec_min_grade"/>
+                <field name="symbol_contrast"/>
+                <field name="symbol_contrast_grade"/>
+                <field name="modulation"/>
+                <field name="modulation_grade"/>
+                <field name="reflection_margin"/>
+                <field name="defects"/>
+                <field name="defects_grade"/>
+                <field name="decodability"/>
+                <field name="decodability_grade"/>
+                <field name="decode"/>
+                <field name="quiet_zone"/>
+                <field name="global_threshold"/>
+                <field name="print_contrast_signal"/>
+                <field name="bargain"/>
+                <field name="axial_nonuniformity"/>
+                <field name="axial_nonuniformity_grade"/>
+                <field name="grid_nonuniformity"/>
+                <field name="grid_nonuniformity_grade"/>
+                <field name="unused_error"/>
+                <field name="unused_error_grade"/>
+                <field name="fixed_pattern_damage"/>
+                <field name="l1"/>
+                <field name="l2"/>
+                <field name="qzl1"/>
+                <field name="qzl2"/>
+                <field name="octasa"/>
+                <field name="ag"/>
+                <field name="segment_a1"/>
+                <field name="segment_a2"/>
+                <field name="segment_a3"/>
+                <field name="segment_b1"/>
+                <field name="segment_b2"/>
+                <field name="segment_c"/>
+                <field name="format_info"/>
+                <field name="version_info"/>
+                <field name="contrast_uniformity"/>
+                <field name="x_growth"/>
+                <field name="y_growth"/>
+                <field name="matrix_size"/>
+                <field name="data"/>
+                <field name="encoded_data"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="view_file_import_form" model="ir.ui.view">
+        <field name="name">file.import.form</field>
+        <field name="model">file.import</field>
+        <field name="arch" type="xml">
+            <form>
+                <!--                <header>-->
+                <!--                    <button string="Upload File" name="action_done" type="object" />-->
+                <!--                </header>-->
+                <sheet>
+                    <group col="4">
+                        <field name="label_id"/>
+                        <field name="print_job_id"/>
+                        <field name="ip_address"/>
+                        <field name="verification_type"/>
+                        <field name="passing_grade_threshold"/>
+                        <field name="date"/>
+                        <field name="time"/>
+                        <field name="last_calibration_grade"/>
+                        <field name="label_numeric_grade"/>
+                        <field name="label_grade"/>
+                        <field name="label_status"/>
+                        <field name="label_failure_reason"/>
+                        <field name="barcode_id"/>
+                        <field name="symbology"/>
+                        <field name="version"/>
+                        <field name="size"/>
+                        <field name="numeric_grade"/>
+                        <field name="grade"/>
+                        <field name="overall_grade"/>
+                        <field name="status"/>
+                        <field name="scan_line_data_check"/>
+                        <field name="xpixel"/>
+                        <field name="ypixel"/>
+                        <field name="failure_reason"/>
+                        <field name="rmax"/>
+                        <field name="rmin"/>
+                        <field name="rmin_grade"/>
+                        <field name="ec_min"/>
+                        <field name="ec_min_grade"/>
+                        <field name="symbol_contrast"/>
+                        <field name="symbol_contrast_grade"/>
+                        <field name="modulation"/>
+                        <field name="modulation_grade"/>
+                        <field name="reflection_margin"/>
+                        <field name="defects"/>
+                        <field name="defects_grade"/>
+                        <field name="decodability"/>
+                        <field name="decodability_grade"/>
+                        <field name="decode"/>
+                        <field name="quiet_zone"/>
+                        <field name="global_threshold"/>
+                        <field name="print_contrast_signal"/>
+                        <field name="bargain"/>
+                        <field name="axial_nonuniformity"/>
+                        <field name="axial_nonuniformity_grade"/>
+                        <field name="grid_nonuniformity"/>
+                        <field name="grid_nonuniformity_grade"/>
+                        <field name="unused_error"/>
+                        <field name="unused_error_grade"/>
+                        <field name="fixed_pattern_damage"/>
+                        <field name="l1"/>
+                        <field name="l2"/>
+                        <field name="qzl1"/>
+                        <field name="qzl2"/>
+                        <field name="octasa"/>
+                        <field name="ag"/>
+                        <field name="segment_a1"/>
+                        <field name="segment_a2"/>
+                        <field name="segment_a3"/>
+                        <field name="segment_b1"/>
+                        <field name="segment_b2"/>
+                        <field name="segment_c"/>
+                        <field name="format_info"/>
+                        <field name="version_info"/>
+                        <field name="contrast_uniformity"/>
+                        <field name="x_growth"/>
+                        <field name="y_growth"/>
+                        <field name="matrix_size"/>
+                        <field name="data"/>
+                        <field name="encoded_data"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fileimport_action" model="ir.actions.act_window">
+        <field name="name">File Import</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">file.import</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--    <menuitem id="fileimport_menu" action="fileimport_action" name="File Import"/>-->
+
+
+    <!--    &lt;!&ndash; server action for call function &ndash;&gt;-->
+    <!--    <record id="upload_file_action" model="ir.actions.server">-->
+    <!--        <field name="name">Upload File</field>-->
+    <!--        <field name="model_id" ref="model_file_import"/>-->
+    <!--        <field name="state">code</field>-->
+    <!--        <field name="code">-->
+    <!--            model.action_done()-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <!-- Menu for above Server action -->
+    <menuitem id='action_done'
+              name='Upload File'
+              sequence="90"
+              action="fileimport_action"/>
+
+</odoo>

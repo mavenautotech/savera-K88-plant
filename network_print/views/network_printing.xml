@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="network_print_tree_view" model="ir.ui.view">
+        <field name="name">network.print.tree.view</field>
+        <field name="model">network.print</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_name" options="{'no_create': True}"/>
+                <field name="qty"/>
+                <field name="printer_id"/>
+                <field name="date" optional="hide"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="network_print_form_view" model="ir.ui.view">
+        <field name="name">network.print.form.view</field>
+        <field name="model">network.print</field>
+        <field name="arch" type="xml">
+            <form options="{'hide_print': True}">
+                <header>
+                    <button name="action_network_printing1" type="object" string="PRN Print" class="oe_highlight"/>
+
+                    <button name="action_network_printing2" type="object" string="Download-10135659" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','10135659')]}"/>
+
+                    <button name="action_network_printing3" type="object" string="Download-90184047" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','90184047')]}"/>
+
+                    <button name="action_network_printing4" type="object" string="Download-00246196" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','00246196')]}"/>
+
+                    <button name="action_network_printing5" type="object" string="Download-30498418" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30498418')]}"/>
+
+                    <button name="action_network_printing6" type="object" string="Download-70498421" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','70498421')]}"/>
+
+                    <button name="action_network_printing7" type="object" string="Download-60217799" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','60217799')]}"/>
+
+                    <button name="action_network_printing8" type="object" string="Download-00217797" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','00217797')]}"/>
+
+                    <button name="action_network_printing9" type="object" string="Download-30256891" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30256891')]}"/>
+
+                    <button name="action_network_printing10" type="object" string="Download-40256895" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','40256895')]}"/>
+
+                    <button name="action_network_printing11" type="object" string="Download-90350937" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','90350937')]}"/>
+
+                    <button name="action_network_printing12" type="object" string="Download-20530621" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','20530621')]}"/>
+
+                    <button name="action_network_printing13" type="object" string="Download-30115066" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30115066')]}"/>
+
+
+
+                    <!-- after added articles -->
+
+
+                    <button name="action_network_printing15" type="object" string="Download-50217139" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','50217139')]}"/>
+
+                    <button name="action_network_printing16" type="object" string="Download-30217140" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30217140')]}"/>
+
+                    <button name="action_network_printing17" type="object" string="Download-10217141" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','10217141')]}"/>
+
+                    <button name="action_network_printing18" type="object" string="Download-30217135" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30217135')]}"/>
+
+                    <button name="action_network_printing19" type="object" string="Download-30217159" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','30217159')]}"/>
+
+                    <button name="action_network_printing20" type="object" string="Download-90217161" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','90217161')]}"/>
+
+                    <button name="action_network_printing21" type="object" string="Download-70217157" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','70217157')]}"/>
+
+                    <button name="action_network_printing22" type="object" string="Download-40217149" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','40217149')]}"/>
+
+                    <button name="action_network_printing23" type="object" string="Download-00217165" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','00217165')]}"/>
+
+                    <button name="action_network_printing24" type="object" string="Download-70221395" class="oe_highlight"  attrs="{'invisible':[('many2onefield_name','!=','70221395')]}"/>
+
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_name" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                            <field name="many2onefield_name" invisible='1'/>
+                            <field name="qty"/>
+                            <field name="printer_id" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                            <field name="date"/>
+                        </group>
+                    </group> 
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <record id="network_print_action" model="ir.actions.act_window">
+        <field name="name">Network Print</field>
+        <field name="res_model">network.print</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="main_menu_network" name="Network Print"/>
+    <menuitem id="menu_print" name="Network Print" action="network_print_action" parent="main_menu_network" sequence='1'/>
+
+</odoo>

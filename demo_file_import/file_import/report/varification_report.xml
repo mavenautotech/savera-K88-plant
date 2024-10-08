@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="file_qweb_varification_report_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+<!--                    <t t-if="move.len(row)==69">-->
+                        <div>
+                            <!--                        <table class="table table-sm table-reports">-->
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Label ID</th>
+                                        <th>Print Job ID</th>
+                                        <th>IP Address</th>
+                                        <th>Verification Type</th>
+                                        <th>Passing Grade Threshold</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Last Calibration Date</th>
+                                        <th>Label Numeric Grade</th>
+                                        <th>Label Grade</th>
+                                        <th>Label Status</th>
+                                        <th>Label Failure Reason</th>
+                                        <th>Barcode ID</th>
+                                        <th>Symbology</th>
+                                        <th>Version</th>
+                                        <th>Size</th>
+                                        <th>Numeric Grade</th>
+                                        <th>Grade</th>
+                                        <th>Overall Grade</th>
+                                        <th>Status</th>
+                                        <th>Scan Line Data Check</th>
+                                        <th>X Position (Pixel)</th>
+                                        <th>Y Position (Pixel)</th>
+                                        <th>Failure Reason</th>
+                                        <th>R Max</th>
+                                        <th>R Min</th>
+                                        <th>R Min Grade</th>
+                                        <th>EC Min</th>
+                                        <th>EC Min Grade</th>
+                                        <th>Symbol Contrast</th>
+                                        <th>Symbol Contrast Grade</th>
+                                        <th>Modulation</th>
+                                        <th>Modulation Grade</th>
+                                        <th>Reflectance Margin</th>
+                                        <th>Defects</th>
+                                        <th>Defects Grade</th>
+                                        <th>Decodability</th>
+                                        <th>Decodability Grade</th>
+                                        <th>Decode</th>
+                                        <th>Quiet Zone</th>
+                                        <th>Global Threshold</th>
+                                        <th>Print Contrast Signal</th>
+                                        <th>Bar Gain</th>
+                                        <th>Axial Nonuniformity</th>
+                                        <th>Axial Nonuniformity Grade</th>
+                                        <th>Grid Nonuniformity</th>
+                                        <th>Grid Nonuniformity Grade</th>
+                                        <th>Unused Error Correction</th>
+                                        <th>Unused Error Correction Grade</th>
+                                        <th>Fixed Pattern Damage</th>
+                                        <th>L1 (left of L finder)</th>
+                                        <th>L2 (bottom of L finder)</th>
+                                        <th>QZL1 (left quiet zone)</th>
+                                        <th>QZL2 (bottom quiet zone)</th>
+                                        <th>OCTASA</th>
+                                        <th>AG</th>
+                                        <th>Segment A1</th>
+                                        <th>Segment A2</th>
+                                        <th>Segment A3</th>
+                                        <th>Segment B1</th>
+                                        <th>Segment B2</th>
+                                        <th>Segment C</th>
+                                        <th>Format Info</th>
+                                        <th>Version Info</th>
+                                        <th>Contrast Uniformity</th>
+                                        <th>X Growth</th>
+                                        <th>Y Growth</th>
+                                        <th>Barcode Data</th>
+                                        <th>Data</th>
+                                        <th>Encoded Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-left">
+                                    <t t-foreach="docs" t-as="move">
+                                        <!--                                    <tr style="font-weight: bold;">-->
+                                        <tr>
+                                            <td colspan="1">
+                                                <t t-esc="move.label_id"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.print_job_id"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.ip_address"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.verification_type"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.passing_grade_threshold"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.date"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.time"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.last_calibration_grade"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.label_numeric_grade"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.label_grade"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.label_status"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.label_failure_reason"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.barcode_id"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.symbology"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.version"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.size"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.numeric_grade"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.grade"/>
+                                            </td>
+                                            <td colspan="1">
+                                                <t t-esc="move.overall_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.status"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.scan_line_data_check"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.xpixel"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.ypixel"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.failure_reason"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.rmax"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.rmin"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.rmin_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.ec_min"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.ec_min_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.symbol_contrast"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.symbol_contrast_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.modulation"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.modulation_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.reflection_margin"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.defects"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.defects_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.decodability"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.decodability_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.decode"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.quiet_zone"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.global_threshold"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.print_contrast_signal"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.bargain"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.axial_nonuniformity"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.axial_nonuniformity_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.grid_nonuniformity"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.grid_nonuniformity_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.unused_error"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.unused_error_grade"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.fixed_pattern_damage"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.l1"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.l2"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.qzl1"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.qzl2"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.octasa"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.ag"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_a1"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_a2"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_a3"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_b1"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_b2"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.segment_c"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.format_info"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.version_info"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.contrast_uniformity"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.x_growth"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.y_growth"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.barcode_data"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.data"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="move.encoded_data"/>
+                                            </td>
+
+                                            <!--                                <td colspan="6">-->
+                                            <!--                                    <span t-esc="main['date_order']"/>-->
+                                            <!--                                </td>-->
+                                            <!--                                <td colspan="6">-->
+                                            <!--                                    <span t-esc="main['customer']"/>-->
+                                            <!--                                </td>sale_order_report-->
+                                            <!--                                <td colspan="6">-->
+                                            <!--                                    <span t-esc="main['sales_man']"/>-->
+                                            <!--                                </td>-->
+                                            <!--                                <td colspan="6">-->
+                                            <!--                                    <span t-esc="main['sum']"/>-->
+                                            <!--                                </td>-->
+                                            <!--                                <td colspan="6">-->
+                                            <!--                                    <span t-esc="main['amount_total']"/>-->
+                                            <!--                                </td>-->
+                                        </tr>
+
+                                    </t>
+                                </tbody>
+                            </table>
+                            <!--                    </div>-->
+                        </div>
+                    </t>
+
+
+                </t>
+<!--            </t>-->
+        </template>
+    </data>
+    <report id="file_report_id"
+            model="file.import"
+            report_type="qweb-pdf"
+            string="Print Varification Report"
+            name="file_import.file_qweb_varification_report_template"
+            file="file_import.file_qweb_varification_report_template"
+    />
+</odoo>
